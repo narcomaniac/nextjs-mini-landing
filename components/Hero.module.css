@@ -1,0 +1,158 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 48px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 36px 24px 90px;
+}
+
+.kicker {
+  margin-bottom: 14px;
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.copy h1 {
+  max-width: 11ch;
+  font-size: clamp(40px, 5vw, 68px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.lead {
+  max-width: 46ch;
+  margin: 20px 0 28px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 28px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 800;
+  box-shadow: var(--shadow);
+}
+
+.button:hover {
+  background: var(--accent-dark);
+}
+
+.stage {
+  position: relative;
+  min-height: 460px;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+  width: 240px;
+  height: 240px;
+  border-radius: 48px;
+  background: var(--yellow);
+  transform: rotate(12deg);
+}
+
+.phone {
+  position: absolute;
+  top: 20px;
+  right: 70px;
+  width: 250px;
+  min-height: 390px;
+  padding: 28px 20px;
+  border: 8px solid #16141f;
+  border-radius: 36px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.side {
+  top: 90px;
+  right: auto;
+  left: 0;
+  width: 180px;
+  min-height: 220px;
+  background: var(--accent);
+  color: #fff;
+}
+
+.notch {
+  width: 90px;
+  height: 16px;
+  margin: 0 auto 24px;
+  border-radius: 999px;
+  background: #16141f;
+}
+
+.phoneTitle {
+  margin-bottom: 18px;
+  font-weight: 800;
+}
+
+.phone strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 36px;
+}
+
+.phone ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.phone li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 14px;
+  background: var(--soft);
+  font-weight: 700;
+}
+
+.phone li span {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 12px 16px 56px;
+  }
+
+  .copy h1 {
+    max-width: none;
+  }
+
+  .stage {
+    min-height: 390px;
+  }
+
+  .phone {
+    right: 0;
+    width: min(230px, 70vw);
+  }
+
+  .side {
+    left: 0;
+    width: 140px;
+  }
+}

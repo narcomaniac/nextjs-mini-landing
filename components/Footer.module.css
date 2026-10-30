@@ -1,0 +1,109 @@
+.footer {
+  background: #fff;
+}
+
+.invite {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 88px 24px 40px;
+  text-align: center;
+}
+
+.invite h2 {
+  margin-bottom: 24px;
+  color: var(--accent);
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.form {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.form input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  padding: 12px 14px;
+}
+
+.form button {
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 18px;
+  background: var(--coral);
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background: #e4542e;
+}
+
+.thanks {
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--soft);
+  font-weight: 700;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px 24px 40px;
+  color: var(--muted);
+}
+
+.bottom strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--ink);
+  font-size: 20px;
+}
+
+.bottom nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-content: flex-start;
+  font-weight: 700;
+}
+
+.bottom a:hover {
+  color: var(--accent);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+@media (max-width: 768px) {
+  .invite {
+    padding: 56px 16px 24px;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  .bottom {
+    flex-direction: column;
+    padding: 24px 16px 36px;
+  }
+}

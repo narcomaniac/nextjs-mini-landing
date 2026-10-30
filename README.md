@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Контрольная точка №2. Мини-проект «Статический лендинг»
 
-## Getting Started
+Одностраничный сайт вымышленного сервиса планирования задач **Flowday**.
 
-First, run the development server:
+## Технологии
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Next.js 16 (App Router)
+- React
+- TypeScript
+- CSS Modules
+- ESLint
+
+Готовые UI-библиотеки не используются.
+
+## Референс
+
+[TaskEase Landing Page DailyUI#3 на Behance](https://www.behance.net/gallery/193532781/TaskEase-Landing-Page-DailyUI3) — работа Daniel John Negron, март 2024.
+
+Скриншот лендинга из проекта: `docs/reference.png`.
+
+### Что взято из референса
+
+- Белая шапка с логотипом слева, текстовыми ссылками и тёмной кнопкой справа.
+- Крупный заголовок слева и макет телефона справа на жёлтом декоративном пятне.
+- Фиолетовая секция возможностей с белыми карточками.
+- Приглашение оставить почту и коралловая кнопка.
+- Нижний блок со ссылками и копирайтом.
+
+### Палитра и шрифт референса
+
+- Фиолетовый `#7568E2`
+- Жёлтый `#FFCA2A`
+- Коралловый `#FC6942`
+- Белый фон и тёмный текст
+- Шрифт в референсе: TT Hoves Pro. В проекте использован похожий свободный шрифт Manrope.
+
+Тексты, название и иллюстрации Flowday написаны заново. Чужие фотографии и логотип TaskEase не используются.
+
+## Секции
+
+1. `Header` — логотип, «Главная», «Возможности», «Контакты», кнопка «Попробовать».
+2. `Hero` — заголовок, описание и макет экрана приложения.
+3. `Features` — три карточки в CSS Grid.
+4. `Footer` — форма доступа, название, копирайт и ссылки.
+
+## Структура
+
+```text
+app/layout.tsx
+app/page.tsx
+app/globals.css
+components/Header.tsx
+components/Hero.tsx
+components/Features.tsx
+components/Footer.tsx
+docs/reference.png
+docs/desktop.png
+docs/tablet.png
+docs/mobile.png
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Запуск
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Проверки:
 
-## Learn More
+```bash
+npm run lint
+npx tsc --noEmit
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Адаптивность
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+На ширине до 768px меню складывается в кнопку, карточки становятся одной колонкой, форма и подвал выстраиваются вертикально. Проверены ширины 375, 768 и 1440 пикселей. Скриншоты лежат в `docs/`.
